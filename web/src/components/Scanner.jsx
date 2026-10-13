@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useId, useRef, useState } from 'react';
 import { Html5Qrcode } from 'html5-qrcode';
 
 // Optional camera scanner. It never blocks anything: if the camera fails,
@@ -8,7 +8,9 @@ export default function Scanner({ onScan }) {
   const [error, setError] = useState('');
   const onScanRef = useRef(onScan);
   onScanRef.current = onScan;
-  const elementId = useRef(`qr-reader-${Math.random().toString(36).slice(2, 8)}`);
+  // useId() is stable and unique per component instance, so the viewport id
+  // survives the React 18 StrictMode remount without a random suffix.
+  const elementId = useRef(`qr-reader-${useId().replace(/[^a-zA-Z0-9_-]/g, '')}`);
 
   useEffect(() => {
     if (!active) return undefined;
