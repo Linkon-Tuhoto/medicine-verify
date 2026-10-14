@@ -1,0 +1,6 @@
+DEMO MEDICINE — NOT FOR HUMAN USE
+Product: Demo Relief Tablets (fictional)
+Batch No: DEMO-2026-001
+Expiry: 03/2026
+Manufacturer: Example Demo Laboratory
+For hackathon demonstration only.
