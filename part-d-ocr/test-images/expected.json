@@ -1,0 +1,18 @@
+{
+  "cases": [
+    {
+      "image": "image.png",
+      "expected": {
+        "batchNo": "DEMO-2026-001",
+        "expiry": "2027-03"
+      }
+    },
+    {
+      "image": "image3.png",
+      "expected": {
+        "batchNo": "DEMO-2026-002",
+        "expiry": "2027-03"
+      }
+    }
+  ]
+}

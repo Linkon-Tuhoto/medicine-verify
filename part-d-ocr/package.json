@@ -1,0 +1,18 @@
+{
+  "name": "medicine-verification-ocr",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Part D OCR extraction and deterministic medicine-pack comparison module",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node scripts/test-compare.js",
+    "test:ocr": "node scripts/test-ocr.js",
+    "test:all": "npm test && npm run test:ocr"
+  },
+  "engines": { "node": "20.x" },
+  "dependencies": {
+    "@google/genai": "^1.0.0",
+    "dotenv": "^16.4.7"
+  }
+}
